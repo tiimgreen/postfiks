@@ -17,6 +17,7 @@ module Postfix
       fail ArgumentError, 'Item not numeric' unless item.is_a? Numeric
       @stack.push(item)
     end
+    alias_method :<<, :push
 
     # Removes the first item on the Stack
     #
@@ -24,6 +25,7 @@ module Postfix
     def pop
       @stack.pop
     end
+    alias_method :-@, :pop
 
     # Returns the first item on the Stack
     #
@@ -31,6 +33,7 @@ module Postfix
     def peek
       @stack.last
     end
+    alias_method :~, :peek
 
     # Returns the size of the Stack
     #
@@ -38,6 +41,7 @@ module Postfix
     def size
       @stack.size
     end
+    alias_method :+@, :size
 
     # Returns the Boolean value of whether or not the Stack has no items
     #

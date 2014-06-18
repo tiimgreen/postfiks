@@ -19,6 +19,12 @@ describe Postfix::Stack do
       stack.push(3)
       expect(stack.peek).to eq 3
     end
+
+    describe '#<<' do
+      it 'is an alias for #push' do
+        expect((stack << 4).pop).to eq 4
+      end
+    end
   end
 
   describe '#pop' do
@@ -31,6 +37,13 @@ describe Postfix::Stack do
       expect(stack.pop).to eq 2
       expect(stack.peek).to eq 1
     end
+
+    describe '#-@' do
+      it 'is an alias for #pop' do
+        stack.push(3)
+        expect(-stack).to eq 3
+      end
+    end
   end
 
   describe '#peek' do
@@ -40,6 +53,13 @@ describe Postfix::Stack do
       stack.push(1)
       stack.push(2)
       expect(stack.peek).to eq 2
+    end
+
+    describe '#~' do
+      it 'is an alias for #peek' do
+        stack.push(3)
+        expect(~stack).to eq 3
+      end
     end
   end
 
@@ -51,6 +71,12 @@ describe Postfix::Stack do
       stack.push(2)
 
       expect(stack.size).to eq 2
+    end
+
+    describe '#+@' do
+      it 'is an alias for #size' do
+        expect(+Postfix::Stack.new([1, 2, 3])).to eq 3
+      end
     end
   end
 
