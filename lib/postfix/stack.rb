@@ -1,8 +1,11 @@
 module Postfix
   # An implementation of a numeric-only Stack
   class Stack
-    def initialize
-      @stack = []
+    # Initializes a Stack
+    #
+    # @param stack [optional, Array] a Stack (as an Array)
+    def initialize(stack = [])
+      @stack = stack
     end
 
     # Pushes an item onto the Stack

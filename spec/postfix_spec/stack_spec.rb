@@ -1,4 +1,9 @@
 describe Postfix::Stack do
+  it 'accepts a Stack (as an Array)' do
+    expect(Postfix::Stack.new.size).to eq 0
+    expect(Postfix::Stack.new([1, 2]).size).to eq 2
+  end
+
   describe '#push' do
     let(:stack) { Postfix::Stack.new }
 
