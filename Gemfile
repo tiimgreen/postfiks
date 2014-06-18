@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rspec', '~> 3.0'
-gem 'pry'
+group :test do
+  gem 'rspec', '~> 3.0'
+  gem 'simplecov', require: false
+end
+
+gem 'pry', group: :development
