@@ -47,5 +47,12 @@ module Postfix
     def empty?
       @stack.empty?
     end
+
+    # Clears the Stack
+    #
+    # @return [Array] empty Stack (as an Array)
+    def clear!
+      @stack.clear
+    end
   end
 end

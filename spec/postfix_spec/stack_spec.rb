@@ -89,4 +89,16 @@ describe Postfix::Stack do
       expect(stack.empty?).to eq false
     end
   end
+
+  describe '#clear!' do
+    let(:stack) { Postfix::Stack.new }
+
+    it 'clears the Stack' do
+      stack.push(1)
+      stack.push(2)
+
+      stack.clear!
+      expect(stack.empty?).to eq true
+    end
+  end
 end
