@@ -7,9 +7,7 @@ describe Postfix::Stack do
   describe '#push' do
     let(:stack) { Postfix::Stack.new }
 
-    it 'pushes a numeric item to the top of the Stack' do
-      expect { stack.push('1') }.to raise_error ArgumentError
-
+    it 'pushes an item to the top of the Stack' do
       stack.push(1)
       expect(stack.peek).to eq 1
 

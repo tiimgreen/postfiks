@@ -1,5 +1,5 @@
 module Postfix
-  # An implementation of a numeric-only Stack
+  # An implementation of a simplistic Stack
   class Stack
     # Initializes a Stack
     #
@@ -10,18 +10,16 @@ module Postfix
 
     # Pushes an item onto the Stack
     #
-    # @param item [Numeric] item to be pushed onto the Stack
-    # @return [Array] the Stack as an Array (so it is reversed)
-    # @raise [ArgumentError] raises error if item is not numeric
+    # @param item item to be pushed onto the Stack
+    # @return [Array] the Stack (as an Array)
     def push(item)
-      fail ArgumentError, 'Item not numeric' unless item.is_a? Numeric
       @stack.push(item)
     end
     alias_method :<<, :push
 
     # Removes the first item on the Stack
     #
-    # @return [Numeric] the removed item from the Stack
+    # @return the removed item from the Stack
     def pop
       @stack.pop
     end
@@ -29,7 +27,7 @@ module Postfix
 
     # Returns the first item on the Stack
     #
-    # @return [Numeric] the first item on the Stack
+    # @return the first item on the Stack
     def peek
       @stack.last
     end
