@@ -19,9 +19,10 @@ module Postfix
 
     # Removes the first item on the Stack
     #
+    # @param n [optional, Integer] the number of items to pop
     # @return the removed item from the Stack
-    def pop
-      @stack.pop
+    def pop(n = 1)
+      @stack.pop(n)
     end
     alias_method :-@, :pop
 

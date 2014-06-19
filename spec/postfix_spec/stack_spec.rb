@@ -32,14 +32,14 @@ describe Postfix::Stack do
       stack.push(1)
       stack.push(2)
 
-      expect(stack.pop).to eq 2
+      expect(stack.pop).to eq [2]
       expect(stack.peek).to eq 1
     end
 
     describe '#-@' do
       it 'is an alias for #pop' do
         stack.push(3)
-        expect(-stack).to eq 3
+        expect(-stack).to eq [3]
       end
     end
   end
