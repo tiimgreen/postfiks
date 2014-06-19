@@ -5,6 +5,7 @@ require 'postfix/stack'
 require 'postfix/tokenizer'
 require 'postfix/parser'
 
+# An implementation of the reverse Polish notation
 module Postfix
   class << self
     def evaluate(expression)
