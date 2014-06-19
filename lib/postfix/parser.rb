@@ -22,13 +22,13 @@ module Postfix
         if token.type == :operand
           @stack << token.value
         elsif token.type == :operator
-          fail InsufficientValuesInExpression if @stack.size < 2
+          fail InsufficientValuesInExpression if +@stack < 2
           @stack << @stack.pop(2).reduce(token.value)
         end
       end
 
-      fail InvalidExpression if @stack.size > 1
-      return @stack.peek if @stack.size == 1
+      fail InvalidExpression if +@stack > 1
+      return ~@stack if +@stack == 1
     end
   end
 end
