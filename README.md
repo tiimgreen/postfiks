@@ -9,6 +9,12 @@ require 'postfix'
 ```
 
 ## Quick Start
+Install the latest stable version of **Postfix** via RubyGems:
+
+```bash
+$ gem install postfix
+```
+
 **Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String.
 
 ```ruby
