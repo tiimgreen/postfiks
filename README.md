@@ -4,12 +4,12 @@
 ```ruby
 require 'postfix'
 
-Postfix.evaluate '2 2 +'
+'2 2 +'.postfix
  # => 4.0
 
-Postfix.evaluate '30 2 * 3 3 * +'
+'30 2 * 3 3 * +'.postfix
  # => 69.0
 
-Postfix.evaluate '2 2 + 5.51 * 2 - 12 *'
+'2 2 + 5.51 * 2 - 12 *'.postfix
  # => 240.48
 ```

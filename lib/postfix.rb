@@ -8,9 +8,11 @@ require 'postfix/parser'
 # An implementation of the reverse Polish notation
 module Postfix
   class << self
-    def evaluate(expression)
-      Parser.new(expression).evaluate
+    def setup
+      return false if String.respond_to?(:postfix)
+      String.send(:define_method, :postfix) { Parser.new(self).evaluate }
     end
-    alias_method :eval, :evaluate
   end
 end
+
+Postfix.setup
