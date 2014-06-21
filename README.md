@@ -1,4 +1,4 @@
-# Postfix [![Build Status](https://travis-ci.org/rafalchmiel/postfix.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfix)
+# Postfix [![Build Status](https://travis-ci.org/rafalchmiel/postfix.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfix) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfix.svg)](https://coveralls.io/r/rafalchmiel/postfix)
 **Postfix** is an implementation of the [reverse Polish notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation) (using [stacks](http://en.wikipedia.org/wiki/Stack_(data_structure))) in the form of a parser which tokenizes the expression and then evaluates it.
 
 ```ruby
