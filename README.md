@@ -5,7 +5,10 @@
 require 'postfix'
 
 '2 2 +'.postfix
- # => 4.0
+ # => #<BigDecimal:7fad2e391a38,'0.4E1',9(18)>
+
+'2 2 +'.postfix == 4
+ # => true
 ```
 
 ## Quick Start
@@ -15,14 +18,20 @@ Install the latest stable version of **Postfix** via RubyGems:
 $ gem install postfix
 ```
 
-**Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String.
+**Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String and the resulting numerical value will be of type [`BigDeciaml`](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html).
 
 ```ruby
 '30 2 * 3 3 * +'.postfix
- # => 69.0
+ # => #<BigDecimal:7fad2e301690,'0.69E2',9(18)>
+
+'30 2 * 3 3 * +'.postfix == 69
+ # => true
 
 '2 2 + 5.51 * 2 - 12 *'.postfix
- # => 240.48
+ # => #<BigDecimal:7fad2ca99af8,'0.24048E3',18(36)>
+
+'2 2 + 5.51 * 2 - 12 *'.postfix == 240.48
+ # => true
 ```
 
 ---

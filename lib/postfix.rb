@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'bigdecimal'
 
 require 'postfix/error'
 require 'postfix/stack'

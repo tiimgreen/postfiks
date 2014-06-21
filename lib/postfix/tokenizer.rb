@@ -21,7 +21,7 @@ module Postfix
     def tokenize(string)
       string.split(DELIMITER).each do |token|
         if numeric?(token)
-          @emitted_tokens << OpenStruct.new(value: Float(token), type: :operand)
+          @emitted_tokens << OpenStruct.new(value: BigDecimal.new(token), type: :operand)
         elsif operator = operator?(token)
           @emitted_tokens << OpenStruct.new(value: operator, type: :operator)
         else
