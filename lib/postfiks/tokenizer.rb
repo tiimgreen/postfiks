@@ -1,4 +1,10 @@
 module Postfiks
+  # A Struct for an operand token
+  Operand = Struct.new(:value)
+
+  # A Struct for an operator token
+  Operator = Struct.new(:type)
+
   # An implementation of a reverse Polish notation tokenizer
   class Tokenizer
     # A delimiter that separates operands and operators
@@ -17,13 +23,13 @@ module Postfiks
     # Tokenizes a string of characters
     #
     # @param string [String] string of characters to be tokenized
-    # @return [Array] an Array of OpenStruct objects containing token data
+    # @return [Array] an Array of Struct objects containing token data
     def tokenize(string)
       string.split(DELIMITER).each do |token|
         if numeric?(token)
-          @emitted_tokens << OpenStruct.new(value: BigDecimal.new(token), type: :operand)
+          @emitted_tokens << Operand.new(BigDecimal.new(token))
         elsif operator = operator?(token)
-          @emitted_tokens << OpenStruct.new(value: operator, type: :operator)
+          @emitted_tokens << Operator.new(operator)
         else
           fail InvalidToken, "`#{token}'"
         end

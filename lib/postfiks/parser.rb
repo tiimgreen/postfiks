@@ -19,11 +19,11 @@ module Postfiks
     # @raise [InvalidExpression]
     def evaluate
       @tokens.each do |token|
-        if token.type == :operand
+        if token.is_a?(Operand)
           @stack << token.value
-        elsif token.type == :operator
+        elsif token.is_a?(Operator)
           fail InsufficientValuesInExpression if +@stack < 2
-          @stack << @stack.pop(2).reduce(token.value)
+          @stack << @stack.pop(2).reduce(token.type)
         end
       end
 

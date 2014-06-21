@@ -1,4 +1,3 @@
-require 'ostruct'
 require 'bigdecimal'
 
 require 'postfiks/error'

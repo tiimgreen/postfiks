@@ -10,7 +10,7 @@ describe Postfiks::Tokenizer do
     it 'tokenizes a string of characters' do
       tokenizer.tokenize('1 2 +')
       expect(tokenizer.emitted_tokens.first.value).to eq 1.0
-      expect(tokenizer.emitted_tokens.last.type).to eq :operator
+      expect(tokenizer.emitted_tokens.last.type).to eq :+
     end
 
     it 'fails if invalid token is encountered' do
