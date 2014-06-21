@@ -11,7 +11,7 @@ module Postfiks
     DELIMITER = ' '
 
     # A list of supported mathematical operators
-    OPERATORS = %i(+ - * /)
+    OPERATORS = [:+, :-, :*, :/]
 
     attr_reader :emitted_tokens
 
