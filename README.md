@@ -1,4 +1,4 @@
-# Postfiks [![Build Status](https://travis-ci.org/rafalchmiel/postfiks.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfix) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfiks.svg)](https://coveralls.io/r/rafalchmiel/postfix)
+# Postfiks [![Build Status](https://travis-ci.org/rafalchmiel/postfiks.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfiks) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfiks.svg)](https://coveralls.io/r/rafalchmiel/postfiks)
 **Postfiks** is an implementation of the [reverse Polish notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation) (using [stacks](http://en.wikipedia.org/wiki/Stack_(data_structure))) in the form of a parser which tokenizes the expression and then evaluates it.
 
 ```ruby
