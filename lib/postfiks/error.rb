@@ -1,4 +1,4 @@
-module Postfix
+module Postfiks
   # Raised when invalid token during tokenization is encountered
   class InvalidToken < StandardError; end
 

@@ -1,4 +1,4 @@
-module Postfix
+module Postfiks
   # An implementation of a reverse Polish notation tokenizer
   class Tokenizer
     # A delimiter that separates operands and operators

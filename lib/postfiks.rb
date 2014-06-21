@@ -1,13 +1,13 @@
 require 'ostruct'
 require 'bigdecimal'
 
-require 'postfix/error'
-require 'postfix/stack'
-require 'postfix/tokenizer'
-require 'postfix/parser'
+require 'postfiks/error'
+require 'postfiks/stack'
+require 'postfiks/tokenizer'
+require 'postfiks/parser'
 
 # An implementation of the reverse Polish notation
-module Postfix
+module Postfiks
   class << self
     # Sets up helper instance method for String class
     #
@@ -20,4 +20,4 @@ module Postfix
   end
 end
 
-Postfix.setup
+Postfiks.setup

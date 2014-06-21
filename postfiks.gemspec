@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'postfix/version'
+require 'postfiks/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'postfix'
-  spec.version       = Postfix::VERSION
+  spec.name          = 'postfiks'
+  spec.version       = Postfiks::VERSION
   spec.authors       = ['Rafal Chmiel']
   spec.email         = ['rafalmarekchmiel@gmail.com']
   spec.summary       = %q(An implementation of the reverse Polish notation.)
   spec.description   = spec.summary
-  spec.homepage      = 'https://github.com/rafalchmiel/postfix'
+  spec.homepage      = 'https://github.com/rafalchmiel/postfiks'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")

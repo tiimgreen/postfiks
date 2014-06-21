@@ -1,4 +1,4 @@
-module Postfix
+module Postfiks
   # An implementation of a simplistic Stack
   class Stack
     # Initializes a Stack

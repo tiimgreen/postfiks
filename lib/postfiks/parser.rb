@@ -1,4 +1,4 @@
-module Postfix
+module Postfiks
   # An implementation of a reverse Polish notation parser
   class Parser
     attr_reader :tokens, :stack

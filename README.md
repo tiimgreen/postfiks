@@ -1,8 +1,8 @@
-# Postfix [![Build Status](https://travis-ci.org/rafalchmiel/postfix.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfix) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfix.svg)](https://coveralls.io/r/rafalchmiel/postfix)
-**Postfix** is an implementation of the [reverse Polish notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation) (using [stacks](http://en.wikipedia.org/wiki/Stack_(data_structure))) in the form of a parser which tokenizes the expression and then evaluates it.
+# Postfiks [![Build Status](https://travis-ci.org/rafalchmiel/postfiks.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfix) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfiks.svg)](https://coveralls.io/r/rafalchmiel/postfix)
+**Postfiks** is an implementation of the [reverse Polish notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation) (using [stacks](http://en.wikipedia.org/wiki/Stack_(data_structure))) in the form of a parser which tokenizes the expression and then evaluates it.
 
 ```ruby
-require 'postfix'
+require 'postfiks'
 
 '2 2 +'.postfix
  # => #<BigDecimal:7fad2e391a38,'0.4E1',9(18)>
@@ -12,13 +12,13 @@ require 'postfix'
 ```
 
 ## Quick Start
-Install the latest stable version of **Postfix** via RubyGems:
+Install the latest stable version of **Postfiks** via RubyGems:
 
 ```bash
-$ gem install postfix
+$ gem install postfiks
 ```
 
-**Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String and the resulting numerical value will be of type [`BigDecimal`](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html).
+**Postfiks** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfiks** will evaluate the expression within that String and the resulting numerical value will be of type [`BigDecimal`](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html).
 
 ```ruby
 '30 2 * 3 3 * +'.postfix
