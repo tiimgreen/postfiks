@@ -18,7 +18,7 @@ Install the latest stable version of **Postfix** via RubyGems:
 $ gem install postfix
 ```
 
-**Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String and the resulting numerical value will be of type [`BigDeciaml`](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html).
+**Postfix** provides a helper method for the `String` class, called `#postfix`. This method can be called on any String — **Postfix** will evaluate the expression within that String and the resulting numerical value will be of type [`BigDecimal`](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html).
 
 ```ruby
 '30 2 * 3 3 * +'.postfix
