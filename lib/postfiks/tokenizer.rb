@@ -27,7 +27,7 @@ module Postfiks
     def tokenize(string)
       string.split(DELIMITER).each do |token|
         if numeric?(token)
-          @emitted_tokens << Operand.new(BigDecimal.new(token))
+          @emitted_tokens << Operand.new(token.to_d)
         elsif operator = operator?(token)
           @emitted_tokens << Operator.new(operator)
         else
