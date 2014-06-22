@@ -16,6 +16,7 @@ module Postfiks
     def setup
       return false if String.respond_to?(:postfix)
       String.send(:define_method, :postfix) { Parser.new(self).evaluate }
+      String.send(:alias_method, :postfiks, :postfix)
     end
   end
 end
