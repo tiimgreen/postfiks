@@ -1,4 +1,4 @@
-# Postfiks [![Build Status](https://travis-ci.org/rafalchmiel/postfiks.svg?branch=master)](https://travis-ci.org/rafalchmiel/postfiks) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfiks.svg)](https://coveralls.io/r/rafalchmiel/postfiks)
+# Postfiks [![Build Status](http://img.shields.io/travis/rafalchmiel/postfiks.svg)](https://travis-ci.org/rafalchmiel/postfiks) [![Coverage Status](https://img.shields.io/coveralls/rafalchmiel/postfiks.svg)](https://coveralls.io/r/rafalchmiel/postfiks) [![Code Climate](http://img.shields.io/codeclimate/github/rafalchmiel/postfiks.svg)](https://codeclimate.com/github/rafalchmiel/postfiks) [![Gem Version](http://img.shields.io/gem/v/postfiks.svg)](https://rubygems.org/gems/postfiks)
 **Postfiks** is an implementation of the [reverse Polish notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation) (using [stacks](http://en.wikipedia.org/wiki/Stack_(data_structure))) in the form of a parser which tokenizes the expression and then evaluates it.
 
 ```ruby
