@@ -33,7 +33,3 @@ $ gem install postfiks
 '2 2 + 5.51 * 2 - 12 *'.postfix == 240.48
  # => true
 ```
-
----
-
-*<p align="center">This project is part of my [curriculum vitæ](http://git.io/rafal) code example portfolio.</p>*
