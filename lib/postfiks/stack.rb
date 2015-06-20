@@ -1,57 +1,51 @@
 module Postfiks
-  # An implementation of a simplistic Stack
+  # An implementation of a Stack collection
+  # @see https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
   class Stack
-    # Initializes a Stack
-    #
-    # @param stack [optional, Array] a Stack (as an Array)
-    def initialize(stack = [])
-      @stack = stack
+    def initialize
+      @stack = []
     end
 
-    # Pushes an item onto the Stack
+    # Adds an element to the collection
     #
-    # @param item item to be pushed onto the Stack
-    # @return [Array] the Stack (as an Array)
-    def push(item)
-      @stack.push(item)
+    # @param element
+    # @return [Array] new collection
+    def <<(element)
+      @stack.push(element)
     end
-    alias_method :<<, :push
 
-    # Removes the first item on the Stack
+    # Removes the last n elements that were added to the collection
     #
-    # @param n [optional, Integer] the number of items to pop
-    # @return the removed item from the Stack
+    # @param n [optional, Integer]
+    # @return removed element(s)
     def pop(n = 1)
       @stack.pop(n)
     end
-    alias_method :-@, :pop
 
-    # Returns the first item on the Stack
+    # Returns the first item in the collection
     #
-    # @return the first item on the Stack
+    # @return first item in collection
     def peek
       @stack.last
     end
-    alias_method :~, :peek
 
-    # Returns the size of the Stack
+    # Returns the number of elements in the collection
     #
-    # @return [Integer] the size of the Stack
+    # @return [Integer] number of elements in collection
     def size
       @stack.size
     end
-    alias_method :+@, :size
 
-    # Returns the Boolean value of whether or not the Stack has no items
+    # Checks if the collection is empty
     #
     # @return [Boolean]
     def empty?
       @stack.empty?
     end
 
-    # Clears the Stack
+    # Clears the collection
     #
-    # @return [Array] empty Stack (as an Array)
+    # @return [Array] emptied collection
     def clear!
       @stack.clear
     end

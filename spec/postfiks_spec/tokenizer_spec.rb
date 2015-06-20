@@ -1,11 +1,11 @@
 describe Postfiks::Tokenizer do
   it 'creates an empty Array upon initialization' do
-    expect(Postfiks::Tokenizer.new.emitted_tokens.class).to eq Array
-    expect(Postfiks::Tokenizer.new.emitted_tokens.empty?).to eq true
+    expect(described_class.new.emitted_tokens).to be_kind_of Array
+    expect(described_class.new.emitted_tokens).to be_empty
   end
 
   describe '#tokenize' do
-    let(:tokenizer) { Postfiks::Tokenizer.new }
+    let(:tokenizer) { described_class.new }
 
     it 'tokenizes a string of characters' do
       tokenizer.tokenize('1 2 +')

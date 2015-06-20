@@ -15,21 +15,20 @@ module Postfiks
 
     attr_reader :emitted_tokens
 
-    # Initializes an empty Array of emitted tokens
     def initialize
       @emitted_tokens = []
     end
 
     # Tokenizes a string of characters
     #
-    # @param string [String] string of characters to be tokenized
-    # @return [Array] an Array of Struct objects containing token data
+    # @param string [String] string to be tokenized
+    # @return [Array] Array of Struct objects containing token data
     def tokenize(string)
       string.split(DELIMITER).each do |token|
         if numeric?(token)
           @emitted_tokens << Operand.new(token.to_d)
-        elsif operator = operator?(token)
-          @emitted_tokens << Operator.new(operator)
+        elsif op = operator(token)
+          @emitted_tokens << Operator.new(op)
         else
           fail InvalidToken, "`#{token}'"
         end
@@ -44,7 +43,7 @@ module Postfiks
       true if Float(token) rescue false
     end
 
-    def operator?(token)
+    def operator(token)
       OPERATORS.include?(token.to_sym) ? token.to_sym : false
     end
   end

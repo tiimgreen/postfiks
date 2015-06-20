@@ -1,104 +1,66 @@
 describe Postfiks::Stack do
-  it 'accepts a Stack (as an Array)' do
-    expect(Postfiks::Stack.new.size).to eq 0
-    expect(Postfiks::Stack.new([1, 2]).size).to eq 2
-  end
+  describe '#<<' do
+    let(:stack) { described_class.new }
 
-  describe '#push' do
-    let(:stack) { Postfiks::Stack.new }
-
-    it 'pushes an item to the top of the Stack' do
-      stack.push(1)
+    it 'pushes an item to the top of the collection' do
+      stack << 1
       expect(stack.peek).to eq 1
-
-      stack.push(2)
+      stack << 2
       expect(stack.peek).to eq 2
-
-      stack.push(3)
+      stack << 3
       expect(stack.peek).to eq 3
-    end
-
-    describe '#<<' do
-      it 'is an alias for #push' do
-        expect((stack << 4).pop).to eq 4
-      end
     end
   end
 
   describe '#pop' do
-    let(:stack) { Postfiks::Stack.new }
+    let(:stack) { described_class.new }
 
-    it 'pops the last item from the Stack' do
-      stack.push(1)
-      stack.push(2)
-
+    it 'pops the last item from the collection' do
+      stack << 1
+      stack << 2
       expect(stack.pop).to eq [2]
       expect(stack.peek).to eq 1
-    end
-
-    describe '#-@' do
-      it 'is an alias for #pop' do
-        stack.push(3)
-        expect(-stack).to eq [3]
-      end
     end
   end
 
   describe '#peek' do
-    let(:stack) { Postfiks::Stack.new }
+    let(:stack) { described_class.new }
 
-    it 'returns the last item from the Stack' do
-      stack.push(1)
-      stack.push(2)
+    it 'returns the last item from the collection' do
+      stack << 1
+      stack << 2
       expect(stack.peek).to eq 2
-    end
-
-    describe '#~' do
-      it 'is an alias for #peek' do
-        stack.push(3)
-        expect(~stack).to eq 3
-      end
     end
   end
 
   describe '#size' do
-    let(:stack) { Postfiks::Stack.new }
+    let(:stack) { described_class.new }
 
-    it 'calculates the size of the Stack' do
-      stack.push(1)
-      stack.push(2)
-
+    it 'calculates the size of the collection' do
+      stack << 1
+      stack << 2
       expect(stack.size).to eq 2
-    end
-
-    describe '#+@' do
-      it 'is an alias for #size' do
-        expect(+Postfiks::Stack.new([1, 2, 3])).to eq 3
-      end
     end
   end
 
   describe '#empty?' do
-    let(:stack) { Postfiks::Stack.new }
+    let(:stack) { described_class.new }
 
-    it 'checks whether the Stack is empty' do
-      expect(stack.empty?).to eq true
-
-      stack.push(1)
-
-      expect(stack.empty?).to eq false
+    it 'checks whether the collection is empty' do
+      expect(stack).to be_empty
+      stack << 1
+      expect(stack).to_not be_empty
     end
   end
 
   describe '#clear!' do
-    let(:stack) { Postfiks::Stack.new }
+    let(:stack) { described_class.new }
 
-    it 'clears the Stack' do
-      stack.push(1)
-      stack.push(2)
-
+    it 'clears the collection' do
+      stack << 1
+      stack << 2
       stack.clear!
-      expect(stack.empty?).to eq true
+      expect(stack).to be_empty
     end
   end
 end
