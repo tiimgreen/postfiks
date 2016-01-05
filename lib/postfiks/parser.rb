@@ -28,7 +28,7 @@ module Postfiks
       end
 
       fail InvalidExpression if @stack.size > 1
-      return @stack.peek if @stack.size == 1
+      @stack.peek
     end
   end
 end
